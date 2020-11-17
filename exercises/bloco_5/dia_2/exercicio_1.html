@@ -58,10 +58,54 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
-       let body = document.querySelector(body);
-       body.creatElement("")
-       
- 
+       let bodyFile = document.querySelector("body");
+       let title = document.createElement("h1");
+       title.innerHTML = "Exercício 5.2 - JavaScript DOM";
+       bodyFile.appendChild(title);
+
+       let newDiv = document.createElement("div");
+       newDiv.className = "main-content";
+       bodyFile.appendChild(newDiv);
+
+       let divParent = document.getElementsByClassName("main-content")[0];
+       let divChild = document.createElement("div");
+       divChild.className = "center-content";
+       divParent.appendChild(divChild);
+
+       let divChildParagraph = document.getElementsByClassName("center-content")[0];
+       let createParagraph = document.createElement("p");
+       createParagraph.innerHTML = "Aula muito boa e de muito aprendizado. Professor muito didático";
+       divChildParagraph.appendChild(createParagraph);
+
+       let divThird = document.createElement("div");
+       divThird.className = "left-content";
+       divParent.appendChild(divThird);
+
+       let divFourth = document.createElement("div");
+       divFourth.className = "right-content";
+       divParent.appendChild(divFourth);
+
+    //     Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do div criado no passo 5;
+
+      let unorderedList = [];
+      for(let index = 1; index <= 10; index += 1) {
+        unorderedList.push(index);
+      }
+      let divList = document.getElementsByClassName("right-content")[0];
+      let createNewList = document.createElement("ul");
+      createNewList.className = "lista-nao-ordenada";
+      divList.appendChild(createNewList);
+      let selectList = document.getElementsByClassName("lista-nao-ordenada")[0];
+      for(let index1 = 0; index1 < unorderedList.length; index1 += 1) {
+        let newList = unorderedList[index1];
+        let listCreate = document.createElement("li");
+        listCreate.innerHTML = newList;
+        selectList.appendChild(listCreate);
+      }
+
+
+    //     Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+    //     Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
     </script>
   </body>
 </html>
