@@ -63,6 +63,20 @@ const books = [
   },
 ];
 
-const authorBornIn1947 = () => books.find((yearOfBirth) => yearOfBirth.author.birthYear === 1947).author.name;
+const expectedResult = {
+  author: {
+    birthYear: 1948,
+    name: 'George R. R. Martin'
+  },
+  genre: 'Fantasia',
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  releaseYear: 1991
+};
 
-assert.strictEqual(authorBornIn1947(), 'Stephen King');
+const getNamedBook = () => books.find((book) => book.name.length === 26);
+  // escreva seu código aqui
+  // Encontre o primeiro livro cujo nome possui 26 caracteres.
+
+
+assert.deepStrictEqual(getNamedBook(), expectedResult);
