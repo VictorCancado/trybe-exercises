@@ -63,11 +63,11 @@ const books = [
   },
 ];
 
-const expectedResult = false
+const expectedResult = true
 
-const everyoneWasBornOnSecXX = () => books.every((century) => century.author.birthYear > 1901 && century.author.birthYear < 2000); 
+const someBookWasReleaseOnThe80s = () => books.some((decade) => decade.releaseYear >= 1980 && decade.releaseYear < 1990);
   // escreva seu código aqui
-  // Faça uma função que retorne true , se todas as pessoas autoras nasceram no século XX, ou false , caso contrário.
+  // Faça uma função que retorne true , se algum livro foi lançado na década de 80, e false , caso contrário.
 
 
-assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);
+assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);

@@ -63,11 +63,12 @@ const books = [
   },
 ];
 
-const expectedResult = false
+const expectedResult = false;
 
-const everyoneWasBornOnSecXX = () => books.every((century) => century.author.birthYear > 1901 && century.author.birthYear < 2000); 
+function authorUnique() {
   // escreva seu código aqui
-  // Faça uma função que retorne true , se todas as pessoas autoras nasceram no século XX, ou false , caso contrário.
+  // Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
 
+}
 
-assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);
+assert.strictEqual(authorUnique(), expectedResult);
