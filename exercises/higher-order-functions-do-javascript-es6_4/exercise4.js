@@ -30,14 +30,8 @@ const people = [
 
 // escreva filterPeople abaixo
 
-const filteredPeople = people.filter(bornCountry => bornCountry.nationality === "Australian" && 
-bornCountry.bornIn > 1900 && bornCountry.bornIn < 2001);
-
-const xxCentury = people.born > 1900 && people.born < 2001;
-const australianBorn = people.nationality === "Australian";
-const filterPeople = (person => {
-    return {}
-})
+const filterPeople = (whoAre) => whoAre.filter(({ bornIn, nationality }) => nationality === "Australian" && 
+bornIn > 1900 && bornIn < 2001);
 
 const filteredPeople = filterPeople(people)
 
